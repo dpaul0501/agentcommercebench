@@ -26,15 +26,26 @@ import dotenv
 
 dotenv.load_dotenv(os.path.join(os.path.dirname(__file__), "../../.env"), override=False)
 
-S3_BUCKET       = "v1-anon"
+# Account-specific values are read from the environment and have no defaults. A bucket
+# name and a role ARN both carry the AWS account they belong to, which does not belong in
+# a public repository.
+S3_BUCKET       = os.environ.get("BEDROCK_FINETUNE_BUCKET", "")
 S3_PREFIX       = "agentcommercebench/finetune"
 BASE_MODEL_ID   = "amazon.nova-micro-v1:0:128k"  # cheapest fine-tunable Nova model (128k context variant)
 OUTPUT_PREFIX   = "agentcommercebench-guard"
 
-_ROLE_ARN = os.environ.get(
-    "BEDROCK_FINETUNE_ROLE_ARN",
-    "arn:aws:iam::170554564926:role/BedrockFineTuneRole",
-)
+_ROLE_ARN = os.environ.get("BEDROCK_FINETUNE_ROLE_ARN", "")
+
+
+def _require_aws_config() -> None:
+    """Fail with the fix rather than with a boto3 error thirty lines later."""
+    missing = [n for n, v in (("BEDROCK_FINETUNE_BUCKET", S3_BUCKET),
+                              ("BEDROCK_FINETUNE_ROLE_ARN", _ROLE_ARN)) if not v]
+    if missing:
+        raise SystemExit(
+            "set " + " and ".join(missing) + " before running this. Both name an AWS "
+            "account, so neither ships with a default."
+        )
 
 
 def _s3():
@@ -197,4 +208,5 @@ if __name__ == "__main__":
     if args.poll:
         poll_job(args.poll)
     else:
+        _require_aws_config()
         submit_from_local(args.train, epochs=args.epochs)

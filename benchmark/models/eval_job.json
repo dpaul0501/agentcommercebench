@@ -1,4 +1,4 @@
 {
   "job": "acb-eval-20260726165925",
-  "output_s3": "s3://v1-anon-east1/agentcommercebench/eval/output/acb-eval-20260726165925"
+  "output_s3": "s3://YOUR-BUCKET/agentcommercebench/eval/output/acb-eval-20260726165925"
 }

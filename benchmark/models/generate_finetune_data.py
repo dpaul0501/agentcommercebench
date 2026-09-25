@@ -18,7 +18,7 @@ Attack category mapping:
 
 Usage:
     python -m benchmark.models.generate_finetune_data --n-clean 500 --n-per 50
-    python -m benchmark.models.generate_finetune_data --output-dir s3://v1-anon/finetune/
+    python -m benchmark.models.generate_finetune_data --output-dir s3://YOUR-BUCKET/finetune/
 """
 import sys, os, json, argparse, random
 from pathlib import Path
