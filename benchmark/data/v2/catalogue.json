@@ -1,0 +1,270 @@
+{
+  "ai-svc-000": {
+    "price_units": 4074,
+    "domain": "ai"
+  },
+  "ai-svc-001": {
+    "price_units": 3911,
+    "domain": "ai"
+  },
+  "ai-svc-002": {
+    "price_units": 4268,
+    "domain": "ai"
+  },
+  "ai-svc-003": {
+    "price_units": 13548,
+    "domain": "ai"
+  },
+  "ai-svc-004": {
+    "price_units": 4171,
+    "domain": "ai"
+  },
+  "ai-svc-005": {
+    "price_units": 1000,
+    "domain": "ai"
+  },
+  "ai-svc-006": {
+    "price_units": 8015,
+    "domain": "ai"
+  },
+  "ai-svc-007": {
+    "price_units": 3420,
+    "domain": "ai"
+  },
+  "ai-svc-008": {
+    "price_units": 3674,
+    "domain": "ai"
+  },
+  "ai-svc-009": {
+    "price_units": 5894,
+    "domain": "ai"
+  },
+  "ai-svc-010": {
+    "price_units": 6953,
+    "domain": "ai"
+  },
+  "ai-svc-011": {
+    "price_units": 26093,
+    "domain": "ai"
+  },
+  "ai-svc-012": {
+    "price_units": 12703,
+    "domain": "ai"
+  },
+  "ai-svc-013": {
+    "price_units": 5849,
+    "domain": "ai"
+  },
+  "ai-svc-014": {
+    "price_units": 1752,
+    "domain": "ai"
+  },
+  "ai-svc-015": {
+    "price_units": 1183,
+    "domain": "ai"
+  },
+  "ai-svc-016": {
+    "price_units": 7093,
+    "domain": "ai"
+  },
+  "data-svc-000": {
+    "price_units": 196461,
+    "domain": "data"
+  },
+  "data-svc-001": {
+    "price_units": 5618,
+    "domain": "data"
+  },
+  "data-svc-002": {
+    "price_units": 3712,
+    "domain": "data"
+  },
+  "data-svc-003": {
+    "price_units": 22162,
+    "domain": "data"
+  },
+  "data-svc-004": {
+    "price_units": 1000,
+    "domain": "data"
+  },
+  "data-svc-005": {
+    "price_units": 2085,
+    "domain": "data"
+  },
+  "data-svc-006": {
+    "price_units": 19736,
+    "domain": "data"
+  },
+  "data-svc-007": {
+    "price_units": 57683,
+    "domain": "data"
+  },
+  "data-svc-008": {
+    "price_units": 2548,
+    "domain": "data"
+  },
+  "data-svc-009": {
+    "price_units": 14352,
+    "domain": "data"
+  },
+  "data-svc-010": {
+    "price_units": 10018,
+    "domain": "data"
+  },
+  "data-svc-011": {
+    "price_units": 44699,
+    "domain": "data"
+  },
+  "data-svc-012": {
+    "price_units": 1000,
+    "domain": "data"
+  },
+  "search-svc-000": {
+    "price_units": 22156,
+    "domain": "search"
+  },
+  "search-svc-001": {
+    "price_units": 1199,
+    "domain": "search"
+  },
+  "search-svc-002": {
+    "price_units": 1000,
+    "domain": "search"
+  },
+  "search-svc-003": {
+    "price_units": 4275,
+    "domain": "search"
+  },
+  "search-svc-004": {
+    "price_units": 2774,
+    "domain": "search"
+  },
+  "search-svc-005": {
+    "price_units": 34089,
+    "domain": "search"
+  },
+  "search-svc-006": {
+    "price_units": 25344,
+    "domain": "search"
+  },
+  "finance-svc-000": {
+    "price_units": 5697,
+    "domain": "finance"
+  },
+  "finance-svc-001": {
+    "price_units": 47871,
+    "domain": "finance"
+  },
+  "finance-svc-002": {
+    "price_units": 7123,
+    "domain": "finance"
+  },
+  "finance-svc-003": {
+    "price_units": 18300,
+    "domain": "finance"
+  },
+  "finance-svc-004": {
+    "price_units": 14776,
+    "domain": "finance"
+  },
+  "finance-svc-005": {
+    "price_units": 22501,
+    "domain": "finance"
+  },
+  "infrastructure-svc-000": {
+    "price_units": 70171,
+    "domain": "infrastructure"
+  },
+  "infrastructure-svc-001": {
+    "price_units": 45695,
+    "domain": "infrastructure"
+  },
+  "infrastructure-svc-002": {
+    "price_units": 22995,
+    "domain": "infrastructure"
+  },
+  "infrastructure-svc-003": {
+    "price_units": 46967,
+    "domain": "infrastructure"
+  },
+  "infrastructure-svc-004": {
+    "price_units": 31230,
+    "domain": "infrastructure"
+  },
+  "infrastructure-svc-005": {
+    "price_units": 2248,
+    "domain": "infrastructure"
+  },
+  "security-svc-000": {
+    "price_units": 1148,
+    "domain": "security"
+  },
+  "security-svc-001": {
+    "price_units": 1907,
+    "domain": "security"
+  },
+  "security-svc-002": {
+    "price_units": 13916,
+    "domain": "security"
+  },
+  "security-svc-003": {
+    "price_units": 2994,
+    "domain": "security"
+  },
+  "security-svc-004": {
+    "price_units": 600482,
+    "domain": "security"
+  },
+  "security-svc-005": {
+    "price_units": 1000,
+    "domain": "security"
+  },
+  "creative-svc-000": {
+    "price_units": 2300,
+    "domain": "creative"
+  },
+  "creative-svc-001": {
+    "price_units": 198367,
+    "domain": "creative"
+  },
+  "creative-svc-002": {
+    "price_units": 1781954,
+    "domain": "creative"
+  },
+  "creative-svc-003": {
+    "price_units": 82037,
+    "domain": "creative"
+  },
+  "creative-svc-004": {
+    "price_units": 248737,
+    "domain": "creative"
+  },
+  "creative-svc-005": {
+    "price_units": 1809072,
+    "domain": "creative"
+  },
+  "scrape-svc-000": {
+    "price_units": 6794,
+    "domain": "scrape"
+  },
+  "scrape-svc-001": {
+    "price_units": 1683,
+    "domain": "scrape"
+  },
+  "scrape-svc-002": {
+    "price_units": 4289,
+    "domain": "scrape"
+  },
+  "scrape-svc-003": {
+    "price_units": 20398,
+    "domain": "scrape"
+  },
+  "scrape-svc-004": {
+    "price_units": 1647,
+    "domain": "scrape"
+  },
+  "scrape-svc-005": {
+    "price_units": 7768,
+    "domain": "scrape"
+  }
+}

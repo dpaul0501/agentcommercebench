@@ -1,0 +1,163 @@
+{
+  "seed": 42,
+  "n_agents": 60,
+  "sessions_per_agent": [
+    6,
+    20
+  ],
+  "domains": [
+    {
+      "name": "ai",
+      "median_amount_units": 5000,
+      "sigma": 1.42,
+      "source": "MEASURED 2026-09-08, service_operations: n=680, p50=5000 units, p95=52000 units. sigma derived from the p95/p50 ratio under a log-normal fit.",
+      "n_operations": 680,
+      "floor_price_units": 1000,
+      "mcc_pool": [],
+      "typical_session_actions": [
+        2,
+        6
+      ]
+    },
+    {
+      "name": "data",
+      "median_amount_units": 5000,
+      "sigma": 2.8,
+      "source": "MEASURED 2026-09-08, service_operations: n=531, p50=5000 units, p95=500000 units. sigma derived from the p95/p50 ratio under a log-normal fit.",
+      "n_operations": 531,
+      "floor_price_units": 1000,
+      "mcc_pool": [],
+      "typical_session_actions": [
+        2,
+        6
+      ]
+    },
+    {
+      "name": "search",
+      "median_amount_units": 10000,
+      "sigma": 1.4,
+      "source": "MEASURED 2026-09-08, service_operations: n=287, p50=10000 units, p95=100000 units. sigma derived from the p95/p50 ratio under a log-normal fit.",
+      "n_operations": 287,
+      "floor_price_units": 1000,
+      "mcc_pool": [],
+      "typical_session_actions": [
+        2,
+        6
+      ]
+    },
+    {
+      "name": "finance",
+      "median_amount_units": 20000,
+      "sigma": 1.03,
+      "source": "MEASURED 2026-09-08, service_operations: n=64, p50=20000 units, p95=108500 units. sigma derived from the p95/p50 ratio under a log-normal fit.",
+      "n_operations": 64,
+      "floor_price_units": 150,
+      "mcc_pool": [],
+      "typical_session_actions": [
+        2,
+        6
+      ]
+    },
+    {
+      "name": "infrastructure",
+      "median_amount_units": 10000,
+      "sigma": 2.38,
+      "source": "MEASURED 2026-09-08, service_operations: n=46, p50=10000 units, p95=500000 units. sigma derived from the p95/p50 ratio under a log-normal fit.",
+      "n_operations": 46,
+      "floor_price_units": 1000,
+      "mcc_pool": [],
+      "typical_session_actions": [
+        2,
+        6
+      ]
+    },
+    {
+      "name": "security",
+      "median_amount_units": 5000,
+      "sigma": 2.05,
+      "source": "MEASURED 2026-09-08, service_operations: n=19, p50=5000 units, p95=145000 units. sigma derived from the p95/p50 ratio under a log-normal fit.",
+      "n_operations": 19,
+      "floor_price_units": 1000,
+      "mcc_pool": [],
+      "typical_session_actions": [
+        2,
+        6
+      ]
+    },
+    {
+      "name": "creative",
+      "median_amount_units": 15000,
+      "sigma": 3.36,
+      "source": "MEASURED 2026-09-08, service_operations: n=14, p50=15000 units, p95=3786000 units. sigma derived from the p95/p50 ratio under a log-normal fit.",
+      "n_operations": 14,
+      "floor_price_units": 2300,
+      "mcc_pool": [],
+      "typical_session_actions": [
+        2,
+        6
+      ]
+    },
+    {
+      "name": "scrape",
+      "median_amount_units": 7500,
+      "sigma": 1.05,
+      "source": "MEASURED 2026-09-08, service_operations: n=6, p50=7500 units, p95=42500 units. sigma derived from the p95/p50 ratio under a log-normal fit.",
+      "n_operations": 6,
+      "floor_price_units": 1250,
+      "mcc_pool": [],
+      "typical_session_actions": [
+        2,
+        6
+      ]
+    }
+  ],
+  "domain_weights": [
+    0.413,
+    0.322,
+    0.174,
+    0.039,
+    0.028,
+    0.012,
+    0.009,
+    0.004
+  ],
+  "limit_multiple_range": [
+    2.5,
+    12.0
+  ],
+  "limit_source_mix": [
+    [
+      "declared_fixed",
+      0.4
+    ],
+    [
+      "declared_builder",
+      0.3
+    ],
+    [
+      "observed",
+      0.3
+    ]
+  ],
+  "overspend_excess_range": [
+    1.02,
+    3.0
+  ],
+  "attack_rate": 0.25,
+  "settlement_failure_rate": 0.203,
+  "retry_after_failure_rate": 0.7,
+  "retry_reuses_idempotency_key": 0.35,
+  "session_span_seconds": [
+    20,
+    900
+  ],
+  "authorize_to_settle_seconds": [
+    0.4,
+    6.0
+  ],
+  "inter_session_hours": [
+    0.5,
+    72.0
+  ],
+  "notes": ""
+}

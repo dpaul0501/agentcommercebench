@@ -1,0 +1,62 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "acbguard"
+version = "0.1.0"
+description = "Adversarial testing and runtime guarding for AI agents that spend money."
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "Apache-2.0" }
+keywords = ["ai-agents", "security", "mcp", "agentic-commerce", "fraud", "red-team"]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: Apache Software License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Topic :: Security",
+    "Topic :: Software Development :: Testing",
+]
+
+
+# The core is intentionally dependency-free: it must be trivial to drop into an
+# existing agent without dragging in a dependency tree.
+dependencies = []
+
+[project.optional-dependencies]
+# HTTP, JSON-RPC, A2A, UCP, and every model target use the standard library only.
+# These extras exist for SDK-based transports, nothing else.
+mcp = ["mcp>=1.2"]
+langgraph = ["langgraph>=0.2", "langchain-core>=0.3"]
+dev = ["pytest>=8", "ruff>=0.6"]
+all = ["mcp>=1.2", "langgraph>=0.2", "langchain-core>=0.3"]
+
+# Without these the PyPI page carries no links back to the source or the benchmark.
+[project.urls]
+Homepage = "https://anonymous.4open.science/r/agentcommercebench"
+Repository = "https://anonymous.4open.science/r/agentcommercebench"
+Issues = "https://anonymous.4open.science/r/agentcommercebench/issues"
+
+[project.scripts]
+acbguard = "acbguard.cli:main"
+
+[tool.hatch.build.targets.wheel]
+packages = ["acbguard"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py310"
+
+[tool.ruff.lint]
+# Pyflakes plus the pycodestyle errors, pinned so `ruff check` means the same thing across
+# ruff versions. These catch dead code and real mistakes. Style migrations are deliberately
+# not selected: rewriting 129 `Optional[X]` annotations to `X | None` is churn, not cleaning.
+select = ["E4", "E7", "E9", "F"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

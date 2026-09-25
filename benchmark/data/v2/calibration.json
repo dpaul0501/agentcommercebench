@@ -1,0 +1,58 @@
+{
+  "catalogue_tolerance": 1.487,
+  "peer_tolerance": 1.42,
+  "catalogue_block": 2.066,
+  "peer_block": 1.993,
+  "quote_tolerance": 1.492,
+  "price_ratio_quantiles": {
+    "catalogue": {
+      "p50": 1.069,
+      "p90": 1.487,
+      "p95": 1.799,
+      "p99": 2.066
+    },
+    "peers": {
+      "p50": 1.028,
+      "p90": 1.42,
+      "p95": 1.74,
+      "p99": 1.993
+    },
+    "quote": {
+      "p50": 1.07,
+      "p90": 1.492,
+      "p95": 1.815,
+      "p99": 2.066
+    }
+  },
+  "fitted_on": {
+    "sessions": 1200,
+    "agents": 60,
+    "clean_sessions": 1200,
+    "clean_payments": 3458
+  },
+  "budget": {
+    "flag": 0.1,
+    "block": 0.01
+  },
+  "z_escalate": 1.694,
+  "z_block": 2.293,
+  "soft_limit_k": 1.694,
+  "ceiling_k": 2.293,
+  "observed_clean_novelty_rate": 0.0418,
+  "clean_z_quantiles": {
+    "p50": 0.705,
+    "p75": 1.258,
+    "p90": 1.694,
+    "p95": 1.872,
+    "p99": 2.293,
+    "p100": 3.291
+  },
+  "note": "Fitted on clean training traffic only. Recall on the test attacks was not an input to this fit and must not become one.",
+  "escalate_at": 0.7,
+  "block_at": 0.95,
+  "clean_sessions_scored": 981,
+  "achieved_on_train": {
+    "flagged": 0.0744,
+    "blocked": 0.0102
+  }
+}

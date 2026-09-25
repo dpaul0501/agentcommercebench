@@ -1,0 +1,14 @@
+# The benchmark core runs on the standard library alone. Generate, audit, calibrate,
+# evaluate, provenance and quality need nothing installed.
+#
+# Everything below is optional and enables one extra path each.
+
+# L0 baseline: run garak's detectors over agent reasoning (benchmark/l0_baselines.py)
+garak>=0.16
+
+# LLM-as-judge baseline and live-agent runs, via Amazon Bedrock
+boto3>=1.34
+
+# Framework adapters for live agent execution (benchmark/frameworks.py)
+langchain-core>=0.3
+langchain-aws>=0.2
