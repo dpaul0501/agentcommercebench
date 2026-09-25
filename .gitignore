@@ -1,7 +1,115 @@
-.venv/
+# Credentials — NEVER commit these
+.env
+deb_accessKeys.csv
+*.csv
+*.pem
+*.key
+dbconn
+
+# Internal / private docs
+investor_memo_v2.md
+strategic_brief.html
+VISION.md
+fraud_detection_spec.md
+fraud_security_layer.md
+
+# Proprietary production system — not for OSS release
+fraud/
+src/
+harness/agent/
+harness/detect/
+harness/trace/
+benchmark/detectors/
+tests/
+# The proprietary suite at the repo root only. The unanchored pattern above also caught
+# sdk/tests, which is the OSS package's own suite and has to ship with it — a test suite
+# nobody can run is not evidence of anything.
+!sdk/tests/
+game.py
+dashboard.py
+load_env.py
+scripts/
+pyproject.toml
+# The SDK is the distributed package and needs its own manifest, which the unanchored
+# pattern above was swallowing. Without it `pip install ./sdk` fails on a fresh clone.
+!sdk/pyproject.toml
+.env.example
+
+# Duplicate / internal
+REPO_README.md
+CODEBASE.md
+
+# Python
 __pycache__/
-*.py[cod]
-.pytest_cache/
+*.pyc
+*.pyo
+*.egg-info/
+.venv/
+venv/
 dist/
 build/
-*.egg-info/
+
+# macOS
+.DS_Store
+
+# LLM cache (large, session-specific)
+benchmark/baselines/.llm_safety_cache.json
+
+# Fine-tuning data (generated, not source)
+benchmark/models/finetune_data.jsonl
+benchmark/models/finetune_data_val.jsonl
+
+# Benchmark results and generated artifacts (not source)
+benchmark/results/
+benchmark/models/artifacts/
+benchmark/models/finetune_job.json
+benchmark/models/finetune_data_v2.jsonl
+benchmark/models/finetune_data_val_v2.jsonl
+benchmark/models/finetune_data_v3.jsonl
+benchmark/models/finetune_data_v3_val.jsonl
+benchmark/models/finetune_data_hf.jsonl
+benchmark/models/finetune_data_hf_val.jsonl
+benchmark/models/sagemaker_job.json
+
+# HuggingFace release staging
+hf_release/
+
+# Internal harness run data
+harness/data/
+
+# IDE
+.idea/
+.vscode/
+*.swp
+
+# Jupyter
+.ipynb_checkpoints/
+
+# PDFs and investor docs
+*.pdf
+
+benchmark/models/finetune_data_hf_graph.jsonl
+benchmark/models/finetune_data_hf_graph_val.jsonl
+benchmark/models/sagemaker_job_graph.json
+
+# Papers stay out of this repo — it is for code and data that reproduce the results.
+# Untracked was not enough: `git add -A` would have swept the .tex and PDFs in.
+paper/
+
+# Local working notes (product, design, method write-ups). Kept on disk, not published here.
+design/
+
+# Internal: not part of the public distribution
+PITCH.md
+DEMO_SCRIPT.md
+TECHNICAL_REPORT.md
+commerce_harness_design.md
+harness_design.html
+demo.py
+demo/
+demo_ach.py
+demo_agent.py
+demo_cli.py
+pitch_demo.py
+sagemaker_train/
+ach/

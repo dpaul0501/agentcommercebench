@@ -54,7 +54,7 @@ python -m benchmark.calibrate --data $D --flag-budget 0.10 --block-budget 0.01
 python -m benchmark.evaluate_v2 --data $D --l0 pattern
 ```
 
-A generated pool is committed, so step 4 runs without steps 1 to 3.
+A reduced pool is committed, so steps 2 to 4 run without step 1. Run step 1 to rebuild the full pool the paper reports.
 
 ## What is in the benchmark
 
@@ -154,11 +154,12 @@ with no account and no network.
 
 ## Published dataset
 
-A sampled release is bundled under `sample/`, so the benchmark can be read without running the generator. It is also published as a dataset; that URL names the authors and is withheld for review.
+**This copy carries a fraction of the data, not the full pool.** `benchmark/data/v2` holds 1200 test sessions (700 clean and 25 of each of the twenty classes) and 500 clean training sessions, which is enough to run each command below end to end. Clean keeps the larger share because it is the denominator of the false-positive rate. The paper's numbers come from the full 3,000 test and 1,200 train pool; the generator rebuilds it exactly from the seed, and step 1 of the Quickstart is that command. `sample/production/actions.jsonl` holds 30 de-identified real settled actions, which are not in the generated pool. The full release is also published as a dataset; that URL names the authors and is withheld for review.
 
-Two configs. `benchmark` holds 1,000 sessions, 25 of each of the twenty classes plus 500
-clean, each tagged with the observation surface that can see it at all. `production` holds 30
-de-identified real settled actions: identifiers are HMAC digests under a salt that is never
+Expect different numbers from this reduced pool, and expect them to be worse. It yields a clean flag rate near 0.09 with five classes at chance, against 0.065 and eight in the paper. The cause is sample size in the calibration fit, not a difference in code: a threshold fitted on 500 clean sessions lands less precisely on a 10% budget than one fitted on 1,200, and a class measured on 25 sessions has a wide enough interval to cross the chance line either way. Running step 1 rebuilds the full pool from the seed and returns the published figures.
+
+The 30 de-identified real settled actions under `sample/production` are the one piece of
+real traffic here: identifiers are HMAC digests under a salt that is never
 written down, timestamps are shifted by one constant so inter-arrival gaps survive and
 calendar dates do not, and one field is dropped outright because its content could not be
 certified.
